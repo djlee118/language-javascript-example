@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ThubUser(nickname, rank) {
+            this.nickname = nickname;
+            this.rank     = rank;
+            this.rankup = function() {
+                this.rank += 1;           
+            }
+
+            this.rankdown = function() {
+                this.rank -= 1;
+            }
+        }
+
+        var myThubUser = new ThubUser("magic", 1);
+        document.write("nickname:" + myThubUser.nickname + " rank:" + myThubUser.rank +"<br />");
+        myThubUser.rankup();
+        document.write("nickname:" + myThubUser.nickname + " rank:" + myThubUser.rank +"<br />");
+        myThubUser.rankdown();
+        document.write("nickname:" + myThubUser.nickname + " rank:" + myThubUser.rank +"<br />");        
+    </script>
+</body>
+</html>

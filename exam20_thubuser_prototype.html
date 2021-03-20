@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype example</title>
+</head>
+<body>
+    <script>
+        function ThubUser(nickname, rank) {
+            this.nickname = nickname;
+            this.rank = rank;
+        }
+
+        ThubUser.prototype.getNickName = function() {
+            return this.nickname;
+        }
+
+        ThubUser.prototype.getRank = function() {
+            return this.rank;
+        }
+
+        var userA = new ThubUser("magic1", 1);
+        var nicknameA = userA.getNickName();
+        var rankA = userA.getRank();
+
+        var userB = new ThubUser("magic2", 2);
+        var nicknameB = userB.getNickName();
+        var rankB = userB.getRank();
+
+        document.writeln("nicknameA:" + nicknameA + " rankA: " + rankA +"<br />");
+        document.writeln("nicknameB:" + nicknameB + " rankB: " + rankB);
+    </script>
+</body>
+</html>
